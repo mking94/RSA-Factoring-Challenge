@@ -10,7 +10,7 @@ return -1;
 }
 char line[1024];
 char *eptr;
-unsigned long strtoint;
+unsigned long strtoint,result;
 while (fgets(line, 1024, file)) {
 result = strtoul(line, &eptr, 10);
 printf("%lu\n",strtoint);
