@@ -10,18 +10,17 @@ return -1;
 }
 char line[1024];
 char *eptr;
-long double tostr;
+long double todouble;
 while (fgets(line, 1024, file)) {
-tostr = strtold(line, &eptr);
-printf("%s=>%.0Lf\n",line,tostr);
-/*for(int i=2; i< strtoint/2; i++)
+todouble = strtold(line, &eptr);
+for(todouble i=2; i< todouble/2; i++)
 {
-if(strtoint % i == 0)
+if(todouble % i == 0)
 {
-printf("%d=%d*%d\n", strtoint, i, strtoint/i);
+printf("%.0Lf=%.0Lf*%.0Lf\n", todouble, i, todouble/i);
 break;
 }
-}*/
+}
 }
 fclose(file);
 return 0;
