@@ -8,17 +8,15 @@ if(!file){
 printf("\n Check the path of %s", fileName);
 return -1;
 }
-char line[500];
+char line[1024];
 int strtoint;
-while (fgets(line, sizeof(line), file)) {
+while (fgets(line, 1024, file)) {
 strtoint = atoi(line);
 for(int i=2; i< strtoint/2; i++)
 {
 if(strtoint % i == 0)
 {
-char buffer[50];
-sprintf(buffer, "%d=%d*%d", strtoint, i, strtoint/i);
-puts(buffer);
+printf("%d=%d*%d", strtoint, i, strtoint/i);
 break;
 }
 }
