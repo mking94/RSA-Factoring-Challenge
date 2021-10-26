@@ -13,7 +13,7 @@ char *eptr;
 unsigned long strtoint,result;
 while (fgets(line, 1024, file)) {
 result = strtoul(line, &eptr, 10);
-printf("%lu\n",strtoint);
+printf("%lu\n",result);
 /*for(int i=2; i< strtoint/2; i++)
 {
 if(strtoint % i == 0)
