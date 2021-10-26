@@ -1,5 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
+long double mod(long double x, long double y) {
+    return x - (int)(x/y) * y;
+}
 int main(int argc, char* argv[])
 {
 char * fileName = argv[1];
@@ -15,7 +18,7 @@ while (fgets(line, 1024, file)) {
 todouble = strtold(line, &eptr);
 for(long double i=2; i< todouble/2; i++)
 {
-if(todouble % i == 0)
+if(mod(todouble, i) == 0)
 {
 printf("%.0Lf=%.0Lf*%.0Lf\n", todouble, i, todouble/i);
 break;
