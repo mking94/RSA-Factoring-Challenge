@@ -9,8 +9,18 @@ printf("\n Check the path of %s", fileName);
 return -1;
 }
 char line[500];
+int strtoint;
 while (fgets(line, sizeof(line), file)) {
-printf("%d",atoi(line));
+strtoint = atoi(line);
+for(i=2; i< strtoint/2; i++)
+{
+if(strtoint % i == 0)
+{
+char buffer[50];
+sprintf(buffer, "%d=%d*%d", strtoint, i, strtoint/i);
+puts(buffer);
+}
+}
 }
 fclose(file);
 return 0;
