@@ -13,7 +13,7 @@ char *eptr;
 long double todouble;
 while (fgets(line, 1024, file)) {
 todouble = strtold(line, &eptr);
-for(todouble i=2; i< todouble/2; i++)
+for(long double i=2; i< todouble/2; i++)
 {
 if(todouble % i == 0)
 {
