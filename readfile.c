@@ -16,7 +16,7 @@ for(int i=2; i< strtoint/2; i++)
 {
 if(strtoint % i == 0)
 {
-printf("%d=%d*%d", strtoint, i, strtoint/i);
+printf("%d=%d*%d\n", strtoint, i, strtoint/i);
 break;
 }
 }
