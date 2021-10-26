@@ -12,7 +12,7 @@ char line[1024];
 int strtoint;
 while (fgets(line, 1024, file)) {
 strtoint = atoi(line);
-printf("%d",strtoint);
+printf("%d\n",strtoint);
 /*for(int i=2; i< strtoint/2; i++)
 {
 if(strtoint % i == 0)
