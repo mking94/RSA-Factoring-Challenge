@@ -10,10 +10,10 @@ return -1;
 }
 char line[1024];
 char *eptr;
-unsigned long tostr;
+long double tostr;
 while (fgets(line, 1024, file)) {
-tostr = strtoul(line, &eptr, 10);
-printf("%s=>%lu\n",line,tostr);
+tostr = strtold(line, &eptr);
+printf("%s=>%.0Lf\n",line,tostr);
 /*for(int i=2; i< strtoint/2; i++)
 {
 if(strtoint % i == 0)
