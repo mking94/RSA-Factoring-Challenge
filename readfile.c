@@ -9,10 +9,10 @@ printf("\n Check the path of %s", fileName);
 return -1;
 }
 char line[1024];
-double strtoint;
+long int strtoint;
 while (fgets(line, 1024, file)) {
 strtoint = atoi(line);
-printf("%f\n",strtoint);
+printf("%ld\n",strtoint);
 /*for(int i=2; i< strtoint/2; i++)
 {
 if(strtoint % i == 0)
