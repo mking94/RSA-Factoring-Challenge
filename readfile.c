@@ -17,7 +17,7 @@ char *eptr;
 long double todouble;
 while (fgets(line, 1024, file)) {
 todouble = strtold(line, &eptr);
-printf("%.0Lf\n",todouble);
+printf("%s=>%.0Lf\n",line,todouble);
 /*for(long double i=2; i< todouble/2; i++)
 {
 if(mod(todouble, i) == 0)
