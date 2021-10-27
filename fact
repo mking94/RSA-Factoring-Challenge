@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-liste = ["1", "4", "6", "8","9"]
+liste = ["1", "4", "6", "8","9","10"]
 
 
 def factoring(liste, start, end):
