@@ -1,14 +1,15 @@
-
 #!/usr/bin/python3
 liste = ["1","4","6","8"]
 def factoring(liste,start,end):
-    while(start<end):
+    while(start < end):
         temp = int(liste[start])
-        for j in range(2, int(temp/2)):
+        j = 2
+        while(j < int(temp/2)):
             if(temp % j == 0):
                 ch = str(temp)+"="+str(int(temp/2))+"*"+str(j)
                 liste[start] = ch
                 break
+            j += 1
         start += 1
 factoring(liste,0,4)
 print(liste)
