@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 liste = ["1","4","6","8"]
-def factoring(liste,start-1,end):
+def factoring(liste,start,end):
     while(start<end+1):
         start++
         temp = liste[start]
@@ -9,5 +9,5 @@ def factoring(liste,start-1,end):
                 ch = str(temp)+"="+str(int(temp/2))+"*"+str(j)
                 liste[i] = ch
                 break
-factoring(liste,0,3)
+factoring(liste,-1,3)
 print(liste)
