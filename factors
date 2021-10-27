@@ -6,7 +6,7 @@ if(len(sys.argv) == 2):
         with open(sys.argv[1]) as f:
             for line in f:
                 toint = int(line)
-                for i in range(2, (toint/2)+1):
+                for i in range(2, int(toint/2)+1):
                     if(toint % i == 0):
                         print("{}={}*{}",toint,i,toint / i)
     else:
