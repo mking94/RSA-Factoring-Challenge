@@ -8,7 +8,7 @@ if(len(sys.argv) == 2):
                 toint = int(line)
                 for i in range(2, int(toint/2)+1):
                     if(toint % i == 0):
-                        print("{}={}*{}",toint,i,toint / i)
+                        print("{}={}*{}".format(toint,i,int(toint / i))
                         break
     else:
         print("Please check file path")
