@@ -5,7 +5,10 @@ if(len(sys.argv) == 2):
     if(os.path.isfile(sys.argv[1])):
         with open(sys.argv[1]) as f:
             for line in f:
-                print(int(line))
+                toint = int(line)
+                for(i = 0;i < toint / 2; i++):
+                    if(toint % i == 0):
+                        print("{}={}*{}",toint,i,toint / i)
     else:
         print("Please check file path")
 elif(len(sys.argv) == 1):
