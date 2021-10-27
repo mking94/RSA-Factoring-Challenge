@@ -17,14 +17,15 @@ char *eptr;
 long double todouble;
 while (fgets(line, 1024, file)) {
 todouble = strtold(line, &eptr);
-for(long double i=2; i< todouble/2; i++)
+printf("%.0Lf",todouble);
+/*for(long double i=2; i< todouble/2; i++)
 {
 if(mod(todouble, i) == 0)
 {
 printf("%.0Lf=%.0Lf*%.0Lf\n", todouble, i, todouble/i);
 break;
 }
-}
+}*/
 }
 fclose(file);
 return 0;
