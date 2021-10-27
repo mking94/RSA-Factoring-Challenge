@@ -14,10 +14,10 @@ return -1;
 }
 char line[1024];
 char *eptr;
-long long double todouble;
+long double todouble;
 while (fgets(line, 1024, file)) {
 todouble = strtold(line, &eptr);
-printf("%s=>%.0Lf\n",line,todouble);
+printf("%s=>%.0lld\n",line,todouble);
 /*for(long double i=2; i< todouble/2; i++)
 {
 if(mod(todouble, i) == 0)
