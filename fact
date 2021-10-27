@@ -4,8 +4,8 @@ def factoring(liste,start,end):
     for i in range(start, end+1):
         temp = int(liste[i])
         print(temp)
-        for j in range(2, int(temp/2)):
-            print("#",temp)
+        for j in range(2, int(liste[i-1]/2)):
+            temp = liste[i-1]
             if(temp % j == 0):
                 ch = str(temp)+"="+str(int(temp/2))+"*"+str(j)
                 liste[i] = ch
