@@ -1,12 +1,5 @@
 #!/usr/python3
 import sys
-import os.path
-if(sys.argv[1])
-{
-    print("ok");
-}
-else
-{
-    print("prob");
-}
+if(sys.argv[1]):
+    print ("ok")
 print("Hello world")
