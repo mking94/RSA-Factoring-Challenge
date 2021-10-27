@@ -8,5 +8,7 @@ if(len(sys.argv) == 2):
                 print(int(line))
     else:
         print("Please check file path")
-else:
+elif(len(sys.argv) == 1):
     print("Please set file path")
+else:
+    print("Please set only one argument")
