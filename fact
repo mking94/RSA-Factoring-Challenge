@@ -18,7 +18,7 @@ def factoring(liste, start, end):
 
 
 t1 = threading.Thread(target=factoring, args=(liste, 0, int(len(liste)/2),))
-t2 = threading.Thread(target=factoring, args=(liste, int(len(liste)/2), len(liste),))
+t2 = threading.Thread(target=factoring, args=(liste, int(len(liste)/2)+1, len(liste),))
 t1.start()
 t2.start()
 print(liste)
