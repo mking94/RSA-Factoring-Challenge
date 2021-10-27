@@ -1,0 +1,8 @@
+#!/usr/python3
+import sys
+import os.path
+if(os.path.isfile(sys.argv[1]) == False)
+{
+    return False
+}
+print("Hello world")
