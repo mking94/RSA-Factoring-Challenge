@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <math.h>
 long double mod(long double x, long double y) {
-    return (x/y) - truncl(x/y);
+    return ((x/y) - truncl(x/y));
 }
 int main(int argc, char* argv[])
 {
