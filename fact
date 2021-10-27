@@ -9,5 +9,5 @@ def factoring(liste,start,end):
                 ch = str(temp)+"="+str(int(temp/2))+"*"+str(j)
                 liste[i] = ch
                 break
-factoring(liste,0,2)
+factoring(liste,0,3)
 print(liste)
