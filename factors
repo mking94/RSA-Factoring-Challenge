@@ -1,12 +1,12 @@
 #!/usr/python3
 import sys
 import os.path
-if(sys.argv[1] is None)
+if(sys.argv[1])
 {
-    return False
+    print("ok");
 }
-if(os.path.isfile(sys.argv[1]) == False)
+else
 {
-    return False
+    print("prob");
 }
 print("Hello world")
