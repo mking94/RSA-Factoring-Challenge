@@ -5,6 +5,7 @@ def factoring(liste,start,end):
         temp = int(liste[i])
         print(temp)
         for j in range(2, int(temp/2)):
+            print("#",temp)
             if(temp % j == 0):
                 ch = str(temp)+"="+str(int(temp/2))+"*"+str(j)
                 liste[i] = ch
