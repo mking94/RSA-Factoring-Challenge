@@ -3,7 +3,7 @@ liste = ["1","4","6","8"]
 def factoring(liste,start,end):
     while(start<end+1):
         start += 1
-        temp = liste[start]
+        temp = int(liste[start])
         for j in range(2, int(temp/2)):
             if(temp % j == 0):
                 ch = str(temp)+"="+str(int(temp/2))+"*"+str(j)
