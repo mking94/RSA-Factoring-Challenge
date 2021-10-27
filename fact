@@ -17,4 +17,4 @@ def factoring(liste, start, end):
 
 
 factoring(liste, 0, 5)
-print(list)
+print(liste)
