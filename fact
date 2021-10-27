@@ -6,7 +6,7 @@ def factoring(liste, start, end):
     while(start < end):
         temp = int(liste[start])
         j = 2
-        while(j < int(temp / 2)):
+        while(j <= int(temp / 2)):
             if(temp % j == 0):
                 ch = str(temp) + "=" + str(int(temp /
  2)) + "*" + str(j)
