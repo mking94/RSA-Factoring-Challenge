@@ -7,7 +7,7 @@ def factoring(liste,start,end):
         while(j < int(temp/2)):
             if(temp % j == 0):
                 ch = str(temp)+"="+str(int(temp/2))+"*"+str(j)
-                liste[start] = ch
+                print(ch)
                 break
             j += 1
         start += 1
