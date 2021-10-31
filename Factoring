@@ -1,0 +1,30 @@
+#!/usr/bin/python3
+import threading 
+liste = ["239809320265259", "4", "12", "34", "128", "1024", "4958", "1718944270642558716715","9","99","999","9999","9797973","49","4"]
+t1 = threading.Thread(target=None, args=())
+t2 = threading.Thread(target=None, args=())
+def startfactoring(index,start,end):
+    temp = int(liste[index])
+    th = threading.Thread(target=startfactoring, args=(end, end+1, end×2,))
+    while(start <= end):
+        if(temp % start == 0):
+            ch = str(temp) + "=" + str(int(temp /
+ start)) + "*" + str(start)
+            liste[index] = ch
+            th.stop()
+            return
+        start += 1
+
+def factoring(liste, start, end):
+    while(start < end):
+        temp = int(liste[start])
+        t1 = threading.Tread(target=startfactoring, args(start,temp,int(temp/4))
+        t2 = threading.Tread(target=startfactoring, args(start,1+int(temp/4),int(temp/2))
+        start += 1
+t1 = threading.Thread(target=factoring, args=(liste, 0, int(len(liste)/2),))
+t3 = threading.Thread(target=factoring, args=(liste, int(len(liste)/2)+1, len(liste),))
+t1.start()
+t3.start()
+t1.join()
+t3.join()
+print(liste)
