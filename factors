@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 import threading
 import time
+import sys
+import os.path
 
 t0 = threading.Thread(target=None, args=())
 t3 = threading.Thread(target=None, args=())
@@ -19,6 +21,7 @@ def factoring(liste, start, end):
 
 if(len(sys.argv) == 2):
     if(os.path.isfile(sys.argv[1])):
+        p = time.time() * 1000
         f = open(sys.argv[1], "r")
         liste = f.readlines()
         t0 = threading.Thread(target=factoring, args=(liste, 0, int(len(liste)/2),))
@@ -27,6 +30,8 @@ if(len(sys.argv) == 2):
         t3.start()
         t0.join()
         t3.join()
+        print(*liste, sep="\n")
+        print((time.time()*1000)-p)
     else :
         print("Please check file path")
 elif(len(sys.argv) == 1):
