@@ -30,7 +30,7 @@ if(len(sys.argv) == 2):
         t3.start()
         t0.join()
         t3.join()
-        print(*liste, sep="\n")
+        """ print(*liste, sep="\n") """
         print((time.time()*1000)-p)
     else :
         print("Please check file path")
