@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 import threading
-import time
 import sys
 import os.path
 
@@ -18,7 +17,6 @@ def factoring(liste, start, end):
 
 if(len(sys.argv) == 2):
     if(os.path.isfile(sys.argv[1])):
-        p = time.time() * 1000
         f = open(sys.argv[1], "r")
         liste = f.readlines()
         t0 = threading.Thread(target=factoring, args=(liste, 0, int(len(liste)/2),))
