@@ -22,7 +22,7 @@ if(len(sys.argv) == 2):
         f = open(sys.argv[1], "r")
         liste = f.readlines()
         t0 = threading.Thread(target=factoring, args=(liste, 0, int(len(liste)/2),))
-        t3 = threading.Thread(target=factoring, args=(liste, int(len(liste)/2)+1, len(liste),))
+        t3 = threading.Thread(target=factoring, args=(liste, int(len(liste)/2), len(liste),))
         t0.start()
         t3.start()
         t0.join()
