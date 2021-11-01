@@ -21,14 +21,14 @@ if(len(sys.argv) == 2):
         p = time.time() * 1000
         f = open(sys.argv[1], "r")
         liste = f.readlines()
-        """ t0 = threading.Thread(target=factoring, args=(liste, 0, int(len(liste)/2),))
+        t0 = threading.Thread(target=factoring, args=(liste, 0, int(len(liste)/2),))
         t3 = threading.Thread(target=factoring, args=(liste, int(len(liste)/2)+1, len(liste),))
         t0.start()
         t3.start()
         t0.join()
-        t3.join() """
+        t3.join()
         print(*liste, sep="\n") 
-        print((time.time()*1000)-p)
+        print("exec time: "(time.time()*1000)-p)
     else :
         print("Please check file path")
 elif(len(sys.argv) == 1):
