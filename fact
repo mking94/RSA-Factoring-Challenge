@@ -13,8 +13,7 @@ size=$(awk 'END{print NR}' $1)
 echo $size
 file=$(echo "$(<$1)")
 array=($(echo "$file" | tr ' ' '\n'))
-echo "${a[2]}"
-echo $file
+echo "${array[2]}"
 exit 0
 else
 echo "Please insert corret file path"
