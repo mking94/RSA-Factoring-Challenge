@@ -12,6 +12,8 @@ if [ -f $1 ]
 then
 size=$(awk 'END{print NR}' $1)
 echo $size
+echo "$(<$1)"
+exit 0
 else
 echo "Please insert corret file path"
 fi
@@ -22,4 +24,3 @@ echo "Please setin only one argument"
 echo $file | head -n 1
 exit 1
 fi
-echo "end"
