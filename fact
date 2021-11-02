@@ -10,9 +10,9 @@ then
 if [ -f $1 ]
 then
 size=$(awk 'END{print NR}' $1)
-echo $size
 file=$(echo "$(<$1)")
 array=($(echo "$file" | tr ' ' '\n'))
+array[2]="df"
 echo "${array[2]}"
 exit 0
 else
