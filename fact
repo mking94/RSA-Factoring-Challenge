@@ -15,7 +15,16 @@ array=($(echo "$file" | tr ' ' '\n'))
 i=0
 while [ $i -le $size ]
 do
-echo "${array[$i]}"
+temp=$(echo "${array[$i]}")
+j=2
+while [ $j -le (($temp/2)) ]
+do
+if [ (($temp%$j)) -eq 0 ]
+then
+echo "${array[$i]}""="((temp/j))"$j"
+fi
+((j=$j+1))
+done
 ((i=$i+1))
 done
 exit 0
@@ -26,6 +35,5 @@ fi
 if [ "$vr" -gt "1" ]
 then
 echo "Please insert only one argument"
-echo $file | head -n 1
 exit 1
 fi
