@@ -16,7 +16,7 @@ i=0
 while [ $i -le $size ]
 do
 echo "${array[$i]}"
-$i=$i+1
+(($i=$i+1))
 done
 exit 0
 else
