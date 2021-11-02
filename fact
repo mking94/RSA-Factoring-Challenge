@@ -1,6 +1,5 @@
 #!/bin/bash
 vr=$(echo "$@" | awk '{print NF}')
-file=$(sudo cat tests/test00)
 if [ "$vr" -eq "0" ]
 then
 echo "Please add file path as argument"
@@ -12,7 +11,8 @@ if [ -f $1 ]
 then
 size=$(awk 'END{print NR}' $1)
 echo $size
-echo "$(<$1)"
+file=$(echo "$(<$1)")
+echo $file
 exit 0
 else
 echo "Please insert corret file path"
