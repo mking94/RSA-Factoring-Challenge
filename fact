@@ -12,6 +12,8 @@ then
 size=$(awk 'END{print NR}' $1)
 echo $size
 file=$(echo "$(<$1)")
+array=($(echo "$file" | tr ' ' '\n'))
+echo "${a[2]}"
 echo $file
 exit 0
 else
