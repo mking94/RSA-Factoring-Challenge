@@ -12,8 +12,7 @@ then
 size=$(awk 'END{print NR}' $1)
 file=$(echo "$(<$1)")
 array=($(echo "$file" | tr ' ' '\n'))
-array[2]="df"
-echo "${array[2]}"
+echo "${array[13]}"
 exit 0
 else
 echo "Please insert corret file path"
@@ -21,7 +20,7 @@ fi
 fi
 if [ "$vr" -gt "1" ]
 then
-echo "Please setin only one argument"
+echo "Please insert only one argument"
 echo $file | head -n 1
 exit 1
 fi
