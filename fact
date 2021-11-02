@@ -12,7 +12,12 @@ then
 size=$(awk 'END{print NR}' $1)
 file=$(echo "$(<$1)")
 array=($(echo "$file" | tr ' ' '\n'))
-echo "${array[13]}"
+i=0
+while [ $i -le $size ]
+do
+echo "${array[$i]}"
+$i=$i+1
+done
 exit 0
 else
 echo "Please insert corret file path"
