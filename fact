@@ -17,11 +17,11 @@ while [ $i -le $size ]
 do
 temp=$(echo "${array[$i]}")
 j=2
-while [ $j -le ((temp/2)) ]
+while [ $j -le $((temp/2)) ]
 do
-if [ (($temp%$j)) -eq 0 ]
+if [ $(($temp%$j)) -eq 0 ]
 then
-echo "${array[$i]}""="((temp/j))"$j"
+echo "${array[$i]}""="$((temp/j))"$j"
 fi
 ((j=$j+1))
 done
